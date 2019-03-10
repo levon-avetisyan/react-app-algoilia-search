@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-app-algoilia-search/precache-manifest.2f52a52e1fd7919ee9c611587bb61923.js"
+  "/react-app-algoilia-search/precache-manifest.3086358ccf85ed814b9f009774dae405.js"
 );
 
 workbox.clientsClaim();
