@@ -1,0 +1,257 @@
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  padding-bottom: 218px;
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Exo', sans-serif;
+}
+
+.main {
+  padding-top: 30px;
+}
+
+.navbar {
+  background: transparent;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Raleway', sans-serif;
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  .navbar-brand {
+    color: white;
+  }
+  .navbar-nav {
+    li {
+      &.dropdown {
+        .dropdown-menu {
+          background: transparent;
+          .dropdown-item {
+            color: white;
+            transition: all 0.3s;
+            &:hover {
+              color: #F5CB5C;
+              background: transparent;
+            }
+          }
+        }
+      }
+      a {
+        color: white;
+        transition: all 0.3s;
+        &:hover {
+          color: #F5CB5C;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  height: 200px;
+  position: relative;
+  background: #155799;
+  margin-bottom: 20px;
+  font-family: 'Calibri', sans-serif;
+  h1 {
+    margin-top: 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 900;
+  }
+  p {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.stats-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters {
+  margin-top: 20px;
+  font-family: 'Calibri', sans-serif;
+}
+
+.ais-InstantSearch__root * {
+  //font-family: 'Exo', sans-serif;
+}
+
+.ais-RefinementList__item {
+  label {
+    margin: 0;
+    span {
+      color: #575a5d;
+      font-size: 16px;
+      &.ais-RefinementList__itemCount {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.ais-Menu__items {
+  .ais-Menu__itemLink {
+    span {
+      color: #575a5d;
+    }
+  }
+}
+
+.ais-Highlight__nonHighlighted {
+  font-size: 15px;
+}
+
+.search-input-wrapper {
+  margin-bottom: 20px;
+  form {
+    min-width: 100%;
+  }
+}
+
+.card {
+  transition: all 0.3s;
+  &:hover {
+    .card-action {
+      a {
+        opacity: 1;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  .card-action {
+    background-image: url("./img/github.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    width: 100%;
+    padding: 15px 15px 0 15px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    a {
+      position: relative;
+      z-index: 10;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s;
+      &.card-action-link {
+        padding: 2px 12px;
+        font-size: 16px;
+      }
+      &.card-action-share {
+        font-size: 24px;
+        margin-top: -6px;
+        transition: all 0.3s;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    &:hover {
+      img {
+        opacity: 1;
+        animation: flash 1.5s;
+      }
+    }
+  }
+  .card-block {
+    padding: 10px;
+    h6 {
+      font-weight: bold;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1;
+      &.card-footer-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          color: #1b1e21;
+          font-size: 11px;
+        }
+        .text-stars {
+          i {
+            color: #ffa94d;
+          }
+        }
+      }
+    }
+    a.card-github-link {
+      color: #24292e;
+      font-size: 26px;
+      text-decoration: none;
+      transition: opacity 0.5s;
+      span {
+        font-size: 14px;
+        font-family: 'Segoe UI Symbol', sans-serif;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    ul.tag-list {
+      li.icon-item {
+        font-size: 13px;
+      }
+      li span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid #eaecef;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
